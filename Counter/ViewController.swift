@@ -1,25 +1,23 @@
-//
-//  ViewController.swift
-//  Counter
-//
-//  Created by Никита Князев on 23.11.2025.
-//
+
 
 import UIKit
 
+
 class ViewController: UIViewController {
-
-    @IBOutlet weak var Score: UILabel!
-
+    
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var incrementButton: UIButton!
+    
     var count = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Score.text = "Значение счётчика : 0"
+        scoreLabel.text = "Значение счётчика: \(count)"
     }
-
-    @IBAction func But(_ sender: UIButton) {
+    
+    @IBAction private func buttonTapped(_ sender: UIButton) {
         count += 1
-        Score.text = "Значение счётчика : $count)" 
+        scoreLabel.text = "Значение счётчика: \(count)"
     }
 }
+
