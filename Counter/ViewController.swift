@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var Score: UILabel!
+
+    var count = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Score.text = "Значение счётчика : 0"
     }
 
-
+    @IBAction func But(_ sender: UIButton) {
+        count += 1
+        Score.text = "Значение счётчика : $count)" 
+    }
 }
-
